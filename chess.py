@@ -10,8 +10,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Chess")
-        self.setGeometry(0, 0, 600, 600)
-        self.setWindowIcon(QIcon("chess_logo.png"))
+        self.setGeometry(0, 0, 800, 800)
+        self.setWindowIcon(QIcon("logo.png"))
         self.initUI()
 
     def show(self):
@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
         for row in range(8):
             for col in range(8):
                 label = QLabel(self)
-                label.setFixedSize(70, 70)
+                label.setFixedSize(100, 100)
                 
                 if (row + col) % 2 == 0:
                     label.setStyleSheet("background-color: #f0d9b5;")
@@ -37,8 +37,6 @@ class MainWindow(QMainWindow):
                 self.labels.append(label)
 
         central_layout.setLayout(grid_layout)
-
-        self.board_state - self.initialize_board()
 
 
 def main():
